@@ -6,11 +6,11 @@ Created on Wed Sep 25 15:29:51 2019
 """
 
 import os
-#import arcpy
+from arcpy.da import Walk
 
 class Gdbcat:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, path=None):
+        self.path = path
         
-        if not name:
-            self.name = 'blah blah blah'
+        if not path:
+            self.path = 'blah blah blah'
